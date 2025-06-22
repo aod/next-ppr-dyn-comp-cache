@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   experimental: {
     useCache: true,
     dynamicIO: true,
+    // ppr: 'incremental' // Error: `experimental.ppr` can not be `"incremental"` when `experimental.dynamicIO` is `true`. PPR is implicitly enabled when Dynamic IO is enabled.
   },
 };
 
