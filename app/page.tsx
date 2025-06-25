@@ -1,4 +1,5 @@
 import Dyn, { DynFixed } from "@/app/_dyn";
+import Link from "next/link";
 import { Suspense } from "react";
 
 export const experimental_ppr = true;
@@ -20,6 +21,14 @@ export default function Home() {
       <Suspense fallback={<p>Loading....</p>}>
         <DynFixed />
       </Suspense>
+      <hr />
+      <p>
+        Isolated test page{" "}
+        <Link href="/test" prefetch={false}>
+          here
+        </Link>
+        .
+      </p>
     </main>
   );
 }
